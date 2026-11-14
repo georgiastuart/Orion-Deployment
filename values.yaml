@@ -71,7 +71,7 @@ service:
 
 # Ingress configuration
 ingress:
-  enabled: true              # Toggle the ingress resource; combined with active flag
+  enabled: false              # Toggle the ingress resource; combined with active flag
   className: ""              # Overrides root ingressClassName when set; falls back to it when empty
   annotations: {}            # Annotations applied to the ingress resource
   usePathPrefix: false       # Prefix ingress path with the release namespace
