@@ -14,7 +14,7 @@ spec:
   routes:
     - match: Host(`{{ .Values.host }}`)
       kind: Rule
-      priority: 100
+      priority: 1
       services:
         - name: hubble
           port: 3000
