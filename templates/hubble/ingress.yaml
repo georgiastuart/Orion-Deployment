@@ -1,4 +1,4 @@
-{{- if and .Values.ingress.enabled .Values.active }}
+{{- if .Values.active }}
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
@@ -12,7 +12,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`{{ .Values.host }}`)
+    - match: Host(`{{ .Values.host }}`) && PathPrefix(`/`)
       kind: Rule
       priority: 1
       services:
